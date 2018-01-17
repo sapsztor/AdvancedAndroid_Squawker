@@ -38,7 +38,8 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Cursor> {
 
-    private static String LOG_TAG = MainActivity.class.getSimpleName();
+    //private static String LOG_TAG = MainActivity.class.getSimpleName();
+    private static String TAG = "PSX";
     private static final int LOADER_ID_MESSAGES = 0;
 
     RecyclerView mRecyclerView;
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements
         // Checks if the extras exist and if the key "test" from our FCM message is in the intent
         if (extras != null && extras.containsKey("test")) {
             // If the key is there, print out the value of "test"
-            Log.d(LOG_TAG, "Contains: " + extras.getString("test"));
+            Log.d(TAG, "Contains: " + extras.getString("test"));
         }
 
         // TODO (1) Make a new package for your FCM service classes called "fcm"
@@ -134,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements
         // This method generates a selection off of only the current followers
         String selection = SquawkContract.createSelectionForCurrentFollowers(
                 PreferenceManager.getDefaultSharedPreferences(this));
-        Log.d(LOG_TAG, "Selection is " + selection);
+        Log.d(TAG, "Selection is " + selection);
         return new CursorLoader(this, SquawkProvider.SquawkMessages.CONTENT_URI,
                 MESSAGES_PROJECTION, selection, null, SquawkContract.COLUMN_DATE + " DESC");
     }
