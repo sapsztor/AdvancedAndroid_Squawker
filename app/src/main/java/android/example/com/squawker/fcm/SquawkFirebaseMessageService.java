@@ -48,7 +48,8 @@ public class SquawkFirebaseMessageService extends FirebaseMessagingService {
     private static final String JSON_KEY_DATE = SquawkContract.COLUMN_DATE;
 
     private static final int NOTIFICATION_MAX_CHARACTERS = 30;
-    private static String LOG_TAG = SquawkFirebaseMessageService.class.getSimpleName();
+    //private static String LOG_TAG = SquawkFirebaseMessageService.class.getSimpleName();
+    private static String LOG_TAG = "PSX";
 
     /**
      * Called when message is received.
