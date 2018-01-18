@@ -34,6 +34,7 @@
         </activity>
 
 
+
         <!-- Id service -->
         <service android:name=".fcm.SquawkFirebaseInstanceIdService">
             <intent-filter>
@@ -43,7 +44,12 @@
 
         <!-- TODO (4) Add your new service here, with an intent filter for action
         com.google.firebase.MESSAGING_EVENT -->
-
+        <service android:name=".fcm.SquawkFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT">
+                </action>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

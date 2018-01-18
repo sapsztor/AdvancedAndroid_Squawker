@@ -25,7 +25,8 @@ import com.google.firebase.iid.FirebaseInstanceIdService;
  */
 public class SquawkFirebaseInstanceIdService extends FirebaseInstanceIdService {
 
-    private static String LOG_TAG = SquawkFirebaseInstanceIdService.class.getSimpleName();
+    //private static String LOG_TAG = SquawkFirebaseInstanceIdService.class.getSimpleName();
+    private static String LOG_TAG = "PSX";
 
     /**
      * Called if InstanceID token is updated. This may occur if the security of
